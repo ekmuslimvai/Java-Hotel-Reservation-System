@@ -1,0 +1,13 @@
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) NOT NULL UNIQUE,
+    password VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE reservations (
+    reservation_id INT AUTO_INCREMENT PRIMARY KEY,
+    guest_name VARCHAR(100),
+    room_number INT,
+    contact_number VARCHAR(20),
+    reservation_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
